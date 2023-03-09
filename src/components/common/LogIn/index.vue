@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import { NCard, NModal } from 'naive-ui'
-import { computed, ref } from 'vue'
+import { computed, reactive } from 'vue'
+
+const props = defineProps<Props>()
+
+const emit = defineEmits<Emit>()
+
+interface Props {
+  visible: boolean
+}
+
+interface Emit {
+  (e: 'update:visible', visible: boolean): void
+}
 const show = computed({
   get() {
     return props.visible
@@ -12,7 +24,7 @@ const show = computed({
 
 const loginForm = reactive({
   phone: '',
-  captcha: ''
+  captcha: '',
 })
 </script>
 
@@ -26,7 +38,7 @@ const loginForm = reactive({
           :rule="{
             required: true,
             message: '请输入手机号',
-            trigger: ['input', 'blur']
+            trigger: ['input', 'blur'],
           }"
         >
           <n-input v-model:value="dynamicForm.name" clearable />
@@ -38,7 +50,7 @@ const loginForm = reactive({
           :rule="{
             required: true,
             message: '请输入验证码',
-            trigger: ['input', 'blur']
+            trigger: ['input', 'blur'],
           }"
         >
           <n-input v-model:value="item.hobby" clearable />

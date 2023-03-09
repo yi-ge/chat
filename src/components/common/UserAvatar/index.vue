@@ -27,13 +27,17 @@ const userInfo = computed(() => userStore.userInfo)
     </div>
     <div class="ml-2">
       <h2 class="font-bold text-md">
-        {{ userInfo.name ?? 'ChenZhaoYu' }}
+        <!-- {{ userInfo.name ?? '律品' }} -->
+        律品
       </h2>
       <p class="text-xs text-gray-500">
-        <span
+        <!-- <span
           v-if="isString(userInfo.description) && userInfo.description !== ''"
           v-html="userInfo.description"
-        />
+        /> -->
+        <span>
+          律品汇科技有限公司
+        </span>
       </p>
     </div>
   </div>

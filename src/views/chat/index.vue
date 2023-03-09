@@ -7,7 +7,7 @@ import { Message } from './components'
 import { useScroll } from './hooks/useScroll'
 import { useChat } from './hooks/useChat'
 import { useCopyCode } from './hooks/useCopyCode'
-import { HoverButton, SvgIcon, LogIn } from '@/components/common'
+import { HoverButton, SvgIcon } from '@/components/common'
 import { useBasicLayout } from '@/hooks/useBasicLayout'
 import { useChatStore } from '@/store'
 import { fetchChatAPIProcess } from '@/api'
@@ -15,7 +15,6 @@ import { t } from '@/locales'
 
 let controller = new AbortController()
 
-const logInshow = ref(true)
 const route = useRoute()
 const dialog = useDialog()
 const ms = useMessage()
@@ -328,7 +327,6 @@ function handleDelete(index: number) {
 }
 
 function handleClear() {
-  console.log('111')
   if (loading.value)
     return
 
@@ -469,6 +467,5 @@ onUnmounted(() => {
         </div>
       </div>
     </footer>
-    <LogIn v-if="logInShow" v-model:visible="logInShow" />
   </div>
 </template>

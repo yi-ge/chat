@@ -40,6 +40,13 @@ export function fetchSession<T>() {
   })
 }
 
+export function fetchSms<T>(phone: string) {
+  return post<T>({
+    url: '/sms',
+    data: { phone },
+  })
+}
+
 export function fetchVerify<T>(token: string) {
   return post<T>({
     url: '/verify',

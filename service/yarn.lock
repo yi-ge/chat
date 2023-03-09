@@ -744,7 +744,7 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.npmmirror.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-chatgpt@^5.0.7:
+chatgpt@^5.0.8:
   version "5.0.8"
   resolved "https://registry.npmmirror.com/chatgpt/-/chatgpt-5.0.8.tgz#a21ec65354fb6cf7bbe4885cffdcbe69d7c37958"
   integrity sha512-Bjh7Y15QIsZ+SkQvbbZGymv1PGxkZ7X1vwqAwvyqaMMhbipU4kxht/GL62VCxhoUCXPwxTfScbFeNFtNldgqaw==
