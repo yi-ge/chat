@@ -25,7 +25,7 @@ rsync -avr --delete-after \
 ssh root@47.242.18.162 <<EOF
 
 docker run -it --rm -v /root/chat-api:/chat-api \
-  -w /chat-api node:19.7.0-alpine pnpm install --ignore-engines
+  -w /chat-api node:19.7.0-alpine yarn install --ignore-engines
 
 # check if chat-api container is running
 if ! docker ps --filter "name=chat-api" --filter "status=running" | grep -q chat-api; then
@@ -34,7 +34,7 @@ if ! docker ps --filter "name=chat-api" --filter "status=running" | grep -q chat
   docker run --name chat-api -itd -m 4096m -p 65526:3002 \
   -v /root/chat-api:/chat-api -v /etc/localtime:/etc/localtime:ro -w /chat-api \
   --env "NODE_ENV=production" \
-  --restart=always node:19.7.0-alpine pnpm start
+  --restart=always node:19.7.0-alpine yarn run prod
 
 else
 
