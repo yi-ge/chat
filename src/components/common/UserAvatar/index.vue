@@ -36,7 +36,7 @@ const userInfo = computed(() => userStore.userInfo)
           v-html="userInfo.description"
         /> -->
         <span>
-          律品汇科技有限公司
+          内部系统，请勿外传
         </span>
       </p>
     </div>
